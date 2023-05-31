@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-export default class NavBar extends Component {
-  render() {
+import React from 'react'
 
+
+export default function NavBar () { 
     function activeHeading(name){
       for (const li of document.getElementsByClassName('nav-link')) {
         li.classList.remove("active");
@@ -12,7 +12,7 @@ export default class NavBar extends Component {
     }
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
+        <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">NewsBeat</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,4 +51,4 @@ export default class NavBar extends Component {
       </div>
     )
   }
-}
+
